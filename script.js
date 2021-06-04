@@ -9,7 +9,7 @@ window.onscroll = function(){
         document.getElementById('nav').classList.remove('transparent-nav');
         document.getElementById('nav').classList.remove('black-nav');
     }
-    if(window.scrollY >= 510){
+    if(window.scrollY >= 550){
         document.getElementById('nav').classList.add('black-nav');
         document.getElementById('nav').classList.remove('transparent-nav');
         document.getElementById('nav').classList.remove('beige-nav');
