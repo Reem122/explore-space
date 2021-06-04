@@ -1,0 +1,325 @@
+/* body */
+@font-face {
+    font-family: "VoyagerLight";
+    src: url(fonts/VoyagerLight.ttf);
+}
+@font-face {
+    font-family: "rift";
+    src: url(fonts/Fort-Foundry-Rift-Bold.otf);
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: black;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: rift;
+}
+.mt-70{
+    margin-top: 70px;
+}
+/* body */
+
+/* navbar */
+.wind, .bi-search{
+    font-size: 25px;
+}
+nav{
+    z-index: 999;
+}
+nav, nav a, nav a:hover, main, footer, footer a, footer a:hover, .plan-your-trip p, .new p, .featured button, h2, .paragraph, .discover a,  .discover a:hover, .discover h3, .white-text{
+    color: white;
+}
+nav h3, footer h3{
+    font-family: "VoyagerLight";
+}
+.transparent-nav{
+    background: transparent;
+}
+.beige-nav{
+    background: rgb(169, 132, 83);
+}
+.black-nav{
+    background: black;
+}
+/* navbar */
+
+/* main */
+main{
+    background-image: url(img/cc_MARS-KeyArt-Horizontal_16x9.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.black{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+main p{
+    font-size: 20px;
+}
+main h1{
+    font-size: 60px;
+    font-weight: 300; 
+}
+
+/* main */
+
+/* form */
+.list-group-horizontal li{
+    background: transparent;
+    width: 220px;
+    height: 80px;
+    border:  1px solid rgb(125, 99, 77);
+    border-radius: 0px !important;
+    color: white;
+}
+form{
+    z-index: 999;
+}
+label{
+    font-size: small;
+}
+select, input{
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: large;
+}
+option{
+    background-color: black;
+    border: 1px solid rgb(125, 99, 77);
+}
+select option:hover{
+    background: rgb(125, 99, 77) !important;
+}
+select option:checked{
+    background: rgb(125, 99, 77) !important;
+}
+input::placeholder{
+    color: white;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+button{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(125, 99, 77);
+    font-size: large;
+}
+/* form */
+
+/* title */
+.title p{
+    color: rgb(205, 160, 111);
+    /* position: relative;
+    top: 10px; */
+}
+.title h2{
+    color: white;
+    /* position: relative;
+    bottom: 10px; */
+}
+/* title */
+
+/* featured */
+.featured img{
+    width: 160px;
+    position: relative;
+    bottom: 100px;
+}
+#bootstrap-overrides .featured .col1, .featured .col2, .featured .col3{
+    height: 400px;
+    margin: 50px;
+    color: white;
+}
+.description{
+    position: relative;
+    bottom: 100px;
+}
+.new{
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    width: 50px;
+    height: 50px;
+    background: rgb(205, 160, 111);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.new p{
+    transform: rotate(-45deg);
+    position: relative;
+    right: 9px;
+    bottom: 2px;
+    font-size: 12px;
+}
+.col1{
+    background-image: url(img/fd82b057502c0ca8c5ade2ae09661e27.jpg);
+}
+.col2{
+    background-image: url(img/martianvehicle1.jpg);
+}
+.col3{
+    background-image: url(img/image1.jpg);
+}
+.col1, .col2, .col3{
+    background-size: cover;
+    position: relative;
+}
+.featured button{
+    background: rgb(205, 160, 111);
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 110px;
+}
+/* featured */
+
+/* bio suit */
+.bio-suit img{
+    height: 480px;
+}
+.line{
+    height: 1px;
+    width: 400px;
+}
+.line::before{
+    content: "";
+    height: 5px;
+    width: 80px;
+    display: block;
+}
+.line, .line::before{
+    background-color: rgb(125, 99, 77);
+}
+.bio-suit p[class="text-uppercase"], .brown-text{
+    color: rgb(125, 99, 77);
+}
+.paragraph{
+  width: 350px;  
+}
+table, td{
+    border: 1px solid rgb(125, 99, 77);
+}
+table p, table i{
+    color: rgb(125, 99, 77);
+}
+table h4{
+    color: rgb(205, 160, 111);
+}
+.row1 td{
+    width: 100px; 
+    height: 100px;
+}
+/* bio suit */
+
+/* discover */
+.discover{
+    height: 630px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+hr{
+    background-color: rgb(125, 99, 77);
+}
+.check{
+    width: 80px;
+    height: 5px;
+    background-color: rgb(125, 99, 77);
+    display: block;
+    position: relative;
+    bottom: 22px;
+    left: 298px;
+}
+.discover img{
+    width: 500px;
+}
+.mt-olympus{
+    width: 200px !important;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px white dashed;
+    padding: 12px;
+    position: relative;
+    bottom: 150px;
+    right: 60px;
+}
+.pointing{
+    height: 1px;
+    width: 60px;
+    transform: rotate(-45deg);
+    background: white;
+    position: relative;
+    bottom: 159px;
+    left: 78px;
+}
+.pointing::after{
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 100px;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 3;
+    position: relative;
+    left: 45px;
+    bottom: -18px;
+}
+.olympus-text{
+    position: relative;
+    bottom: 260px;
+    right: 200px;
+}
+/* discover */
+
+/* testimonial */
+.testimonials{
+    margin: 80px;
+}
+.testimonials .line{
+    width: 100%;
+}
+.testimonials img{
+    width: 100%;
+}
+.testimonials td{
+    width: 30px;
+    height: 30px;
+}
+/* testimonial */
+
+/* plan your trip */
+.plan-your-trip{
+    margin-top: 70px;
+}
+.plan-your-trip .row{
+    margin: 10px;
+}
+.plan-your-trip img{
+    width: 64px;
+}
+.plan-your-trip h5{
+    color: rgb(205, 160, 111);
+    font-weight: bold;
+}
+.plan-your-trip p{
+    font-size: 14px;
+}
+/* plan your trip */
+
+/* footer */
+
+footer .container{
+    position: relative;
+    bottom: 270px;
+    height: 40px;
+}
+footer img{
+    width: 530px;
+}
+/* footer */
