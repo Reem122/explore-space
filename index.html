@@ -2,129 +2,169 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="The safest way to explore the galaxy">
+    <meta name="keywords" content="galaxy, space, explore the space">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>Explore Space</title>
   </head>
-  <body id="bootstrap-overrides">
-    <div class="appear"></div>
-      <nav class="text-uppercase position-fixed top-0 start-0 end-0" id="nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-2 text-start d-flex justify-content-start align-items-center mt-1"><i class="bi bi-search"></i></div>
-            <div class="col-8 text-center d-flex justify-content-center align-items-center mt-1">
-              <ul class="list-inline">
-                <li class="list-inline-item ms-4"><a href="#">destinations</a></li>
-                <li class="list-inline-item ms-4 me-4"><a href="#">bookings</a></li>
-                <li class="list-inline-item ms-4 me-4"><a href="#"><h3>space</h3></a></li>
-                <li class="list-inline-item ms-4 me-4"><a href="#">technology</a></li>
-                <li class="list-inline-item me-4"><a href="#">my trips</a></li>
-              </ul>
-            </div>
-            <div class="col-2 text-end d-flex justify-content-end mt-1">
+  <body id="overrides">
+    <header class="position-fixed top-0 start-0 end-0" id="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-lg-none" href="#"><h3>space</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="col-lg-2 text-start d-flex justify-content-start align-items-center" onclick="search()" style="cursor: pointer;"><p class="m-0"><span class="d-lg-none">search </span><i class="bi bi-search"></i></p></div>
+            <ul class=" col-lg-8 navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">bookings</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link active" aria-current="page" href="#"><h3>space</h3></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">technology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">my trips</a>
+              </li>
+            </ul>
+            <div class="col-lg-2 text-lg-end d-flex justify-content-lg-end align-items-center">
               <div>
-                <p><span style="color: rgb(187, 145, 96);">mars </span>conditions<br>
+                <p class="m-0"><span style="color: rgb(187, 145, 96);">mars </span>conditions<br>
                 <span class="wind">-50<sup>f</sup> <i class="bi bi-wind"></i></span></p>
               </div>
             </div>
           </div>
         </div>
       </nav>
+    </header>
+    <div id="page">  
       <main class="text-center text-uppercase d-flex justify-content-center align-items-center">
         <div class="black w-100 h-100 d-flex justify-content-center align-items-center">
           <div><p>the safest way to</p><h1>explore the galaxy</h1></div>
         </div>
       </main>
-      <form action="#" method="post" class="m-5">
-        <div class="d-flex justify-content-center text-uppercase">
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item d-flex justify-content-center align-items-center">
-              <div>
-                <label for="launch-pad">launch pad</label><br>
-                <select id="launch-pad" name="launch-pad">
-                  <option value="sea">sea</option>
-                </select>
+      <section class="form-search mt-5">
+        <form action="#" method="post"></form>
+          <div class="container d-flex justify-content-center text-uppercase">
+            <div class="row">
+              <div class="col-12 col-md-2 m-auto">
+                <div>
+                  <label for="launch-pad">launch pad</label><br>
+                  <select id="launch-pad" name="launch-pad">
+                    <option value="sea">sea</option>
+                  </select>
+                </div>
               </div>
-            <li class="list-group-item d-flex justify-content-center align-items-center">
-              <div>
-                <label for="destination">destination</label><br>
-                <select id="destination" name="destination">
-                  <option value="moon">moon</option>
-                  <option value="mars">mars</option>
-                  <option value="europa">europa</option>
-                  <option value="titan">titan</option>
-                  <option value="saturn">saturn</option>
-                  <option value="neptune">neptune</option>
-                </select>
+              <div class="col-12 col-md-2 m-auto">
+                <div>
+                  <label for="destination">destination</label><br>
+                  <select id="destination" name="destination">
+                    <option value="moon">moon</option>
+                    <option value="mars">mars</option>
+                    <option value="europa">europa</option>
+                    <option value="titan">titan</option>
+                    <option value="saturn">saturn</option>
+                    <option value="neptune">neptune</option>
+                  </select>
+                </div>
               </div>
-            <li class="list-group-item d-flex justify-content-center align-items-center">
-              <div>
-                <label for="dates">dates</label><br>
-                <input type="date" id="dates" name="dates">
+              <div class="col-12 col-md-2 m-auto">
+                <div>
+                  <label for="dates">dates</label><br>
+                  <input type="date" id="dates" name="dates">
+                </div>
               </div>
-            <li class="list-group-item d-flex justify-content-center align-items-center">
-              <div>
-                <label for="passengers">passengers</label><br>
-                <input type="number" min="0" id="passengers" name="passengers" placeholder="no. of passengers">
+              <div class="col-12 col-md-2 m-auto">
+                <div>
+                  <label for="passengers">passengers</label><br>
+                  <input type="number" min="0" id="passengers" name="passengers" placeholder="no. of passengers">
+                </div>
               </div>
-            <li class="list-group-item d-flex justify-content-center align-items-center"><div><button class="text-uppercase">search</button></div>
-          </ul>
-        </div>
-      </form>
-      <div class="title">
+              <div class="col-12 col-md-2 m-auto">
+                <div>
+                  <button class="text-uppercase">search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <div class="title mt-5">
         <p class="text-uppercase text-center">featured</p>
         <h2 class="text-uppercase text-center">adventures</h2>
       </div>
-      <section class="featured mt-70">
-        <div class="container">
-          <div class="row">
-            <div class="col col1 text-center">
-              <img src="img\moon.png" class="m-3">
-              <div class="new d-flex justify-content-center align-items-center"><p class="text-uppercase">new</p></div>
-                <div class="description">
-                  <p class="text-uppercase">moon</p>
-                  <h5 class="text-uppercase">dune buggy tours</h5>
+      <section class="featured mt-120">
+        <div class="content-container">
+          <div class="container">
+            <div class="row d-flex flex-md-nowrap justify-content-around justify-content-md-evenly">
+              <div class="col-12 col-md-6 col-lg-4 col1 text-center">
+                <div>
+                  <img src="img\moon.png">
+                  <div class="new d-flex justify-content-center align-items-center"><p class="text-uppercase">new</p></div>
+                    <div class="description">
+                      <p class="text-uppercase">moon</p>
+                      <h5 class="text-uppercase">dune buggy tours</h5>
+                    </div>
+                    <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $199</button></div>
                 </div>
-              <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $199</button></div>
-            </div>
-            <div class="col col2 text-center">
-              <img src="img\mars.png" class="m-3">
-              <div class="description">
-                <p class="text-uppercase">mars</p>
-                <h5 class="text-uppercase">canyon adventures</h5>
               </div>
-              <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $399</button></div>
-            </div>
-            <div class="col col3 text-center">
-              <img src="img\neptune1.png" class="m-3">
-              <div class="description">
-                <p class="text-uppercase">neptune</p>
-                <h5 class="text-uppercase">ocean aerial tours</h5>
+              <div class="col-12 col-md-6 col-lg-4 col2 text-center">
+                <div>
+                  <img src="img\mars.png">
+                  <div class="description">
+                    <p class="text-uppercase">mars</p>
+                    <h5 class="text-uppercase">canyon adventures</h5>
+                  </div>
+                  <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $399</button></div>
+                </div>
               </div>
-              <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $899</button></div>
+              <div class="col-12 col-md-6 col-lg-4 col3 text-center">
+                <div>
+                  <img src="img\neptune1.png">
+                  <div class="description">
+                    <p class="text-uppercase">neptune</p>
+                    <h5 class="text-uppercase">ocean aerial tours</h5>
+                  </div>
+                  <div class="text-uppercase d-flex justify-content-center align-items-end"><button>from $899</button></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="bio-suit m-5 mt-70">
-        <div class="container">
-          <div class="row mt-4 mb-4">
-            <div class="col">
-              <img src="img\growth-gurus-digital-marketing-astronaut-pointing-1.png">
-            </div>
-            <div class="col container">
-              <div class="row mt-4 mb-4">
-                <div class="col">
-                  <p class="text-uppercase">enhanced luxury</p>
-                  <h2 class="text-uppercase">bio suit 2.0</h2>
+    </section>
+    <section class="bio-suit mt-5">
+      <div class="container m-auto">
+        <div class="row mt-4 mb-4 d-flex flex-wrap-reverse justify-content-center">
+          <div class="col-md-6 mt-5 mt-md-0 d-flex justify-content-center align-items-end">
+            <img src="img\growth-gurus-digital-marketing-astronaut-pointing-1.png">
+          </div>
+          <div class="col-md-6 m-auto container d-flex justify-content-center">
+            <div>
+              <div class="row m-auto mt-4 mb-4 p-10">
+                <div class="col-7">
+                  <div>
+                    <p class="text-uppercase">enhanced luxury</p>
+                    <h2 class="text-uppercase">bio suit 2.0</h2>
+                  </div>
                 </div>
-                <div class="col d-flex align-items-end">
-                  <p class="text-uppercase">$100 upgrade</p>
+                <div class="col-5 d-flex align-items-end">
+                  <div>
+                    <p class="text-uppercase">$100 upgrade</p>
+                  </div>
                 </div>
               </div>
-              <div class="row mt-4 mb-4">
+              <div class="row m-auto mt-4 mb-4">
                 <div class="col">
                   <div class="line"></div>
                 </div>
@@ -140,23 +180,23 @@
                     <tr class="row1">
                       <td class="text-center text-uppercase align-middle">
                         <h2>50%</h2>
-                        <p>lighter</p>
+                        <p class="m-0">lighter</p>
                       </td>
                       <td class="text-center text-uppercase align-middle">
                         <h2>hud</h2>
-                        <p>controls</p>
+                        <p class="m-0">controls</p>
                       </td>
                       <td class="text-center text-uppercase align-middle">
                         <h2>8hrs</h2>
-                        <p>oxygen</p>
+                        <p class="m-0">oxygen</p>
                       </td>
                     </tr>
                     <tr>
                       <td class="invisible"></td>
-                      <td class="text-center text-uppercase align-middle" style="width: 150px; height: 50px;">
-                        <h4 style="font-size: large;">learn more</h4>
+                      <td class="text-center text-uppercase align-middle learn-more" style="width: 150px; height: 50px;">
+                        <h4 class="m-0" style="font-size: large;">learn more</h4>
                       </td>
-                      <td class="text-center text-uppercase align-middle" style="width: 50px; height: 50px;">
+                      <td class="text-center text-uppercase align-middle right" style="width: 50px; height: 50px;">
                         <i class="bi bi-chevron-right"></i>
                       </td>
                     </tr>
@@ -167,89 +207,90 @@
           </div>
         </div>
       </section>
-      <div class="title mb-20">
+      <div class="title mt-5">
         <p class="text-uppercase text-center">discover</p>
         <h2 class="text-uppercase text-center">other worlds</h2>
       </div>
-      <section class="discover mt-70">    
-        <div class="d-flex justify-content-center">
-          <ul class="list-inline text-uppercase">
-            <li class="list-inline-item ms-5"><a href="#">moon</a></li>
-            <li class="list-inline-item ms-5 me-5"><a href="#">mars</a></li>
-            <li class="list-inline-item ms-5 me-5"><a href="#">europa</a></li>
-            <li class="list-inline-item ms-5 me-5"><a href="#">titan</a></li>
-            <li class="list-inline-item ms-5 me-5"><a href="#">saturn</a></li>
-            <li class="list-inline-item me-5"><a href="#">neptune</a></li>
-          </ul>
+      <section class="discover mt-5 w-100 mx-0">    
+        <div class="container d-flex justify-content-center">
+          <div class="row m-auto">
+            <div class="col-2 text-center" id="moon"><a href="#">moon</a></div>
+            <div class="col-2 text-center active" id="mars"><a href="#">mars</a></div>
+            <div class="col-2 text-center" id="europa"><a href="#">europa</a></div>
+            <div class="col-2 text-center" id="titan"><a href="#">titan</a></div>
+            <div class="col-2 text-center" id="saturn"><a href="#">saturn</a></div>
+            <div class="col-2 text-center" id="neptune"><a href="#">neptune</a></div>
+          </div>
         </div>
-        <div>
-          <hr>
-          <div class="check"></div>
-        </div>
-        <div class="container">
+        <hr>
+        <div class="container mt-5">
           <div class="row">
-            <div class="col">
-              <div class="container">
-                <div class="row text-uppercase mt-4 mb-4">
-                  <div class="col"><h3>the red planet</h3></div>
-                  <div class="col d-flex align-items-end brown-text"><p>3 day trip</p></div>
-                </div>
-                <div class="row mt-4 mb-4">
-                  <div class="col">
-                    <p class="white-text">Mars is the fourth planet from the Sun and is the second smallest planet in the solar system. Named after the Roman god of war.</p>
+            <div class="col-12 col-md-6">
+              <div class="container d-flex justify-content-center">
+                <div>
+                  <div class="row text-uppercase mt-4 mb-4">
+                    <div class="col-8"><h3>the red planet</h3></div>
+                    <div class="col-4 d-flex align-items-end brown-text"><p>3 day trip</p></div>
                   </div>
-                </div>
-                <div class="row mt-4 mb-4">
-                  <div class="col">
-                    <table>
-                      <tr class="row1">
-                        <td class="text-center text-uppercase align-middle">
-                          <h2>38%</h2>
-                          <p>gravity</p>
-                        </td>
-                        <td class="text-center text-uppercase align-middle">
-                          <h2>24 <span>hr</span></h2>
-                          <p>in a day</p>
-                        </td>
-                        <td class="text-center text-uppercase align-middle">
-                          <h2>-60<sup>F</sup></h2>
-                          <p>avg temp</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center text-uppercase align-middle" style="width: 150px; height: 50px;">
-                          <h4 style="font-size: large;">book a trip</h4>
-                        </td>
-                        <td class="text-center text-uppercase align-middle" style="width: 50px; height: 50px;">
-                          <i class="bi bi-chevron-left"></i>
-                        </td>
-                        <td class="text-center text-uppercase align-middle" style="width: 50px; height: 50px;">
-                          <i class="bi bi-chevron-right"></i>
-                        </td>
-                      </tr>
-                    </table>
+                  <div class="row mt-4 mb-4">
+                    <div class="col">
+                      <p class="white-text" style="max-width: 580px;">Mars is the fourth planet from the Sun and is the second smallest planet in the solar system. Named after the Roman god of war.</p>
+                    </div>
+                  </div>
+                  <div class="row mt-4 mb-4">
+                    <div class="col">
+                      <table class="m-auto ms-md-0">
+                        <tr class="row1">
+                          <td class="text-center text-uppercase align-middle">
+                            <h2>38%</h2>
+                            <p class="m-0">gravity</p>
+                          </td>
+                          <td class="text-center text-uppercase align-middle">
+                            <h2>24 <span>hr</span></h2>
+                            <p class="m-0">in a day</p>
+                          </td>
+                          <td class="text-center text-uppercase align-middle">
+                            <h2>-60<sup>F</sup></h2>
+                            <p class="m-0">avg temp</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-center text-uppercase align-middle book-a-trip" style="width: 150px; height: 50px;">
+                            <h4 class="m-0" style="font-size: large;">book a trip</h4>
+                          </td>
+                          <td class="text-center text-uppercase align-middle left" style="width: 50px; height: 50px;">
+                            <i class="bi bi-chevron-left"></i>
+                          </td>
+                          <td class="text-center text-uppercase align-middle right" style="width: 50px; height: 50px;">
+                            <i class="bi bi-chevron-right"></i>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <img src="img\mars.png">
-              <div class="pointing"></div>
-                <img src="img\17766460_fad7afd7dbbfe972851e14fa2b9396dc_t1.jpg" class="mt-olympus d-block">
-                <div class="text-uppercase olympus-text">
-                  <p><span class="brown-text">mt. olympus</span><br>
-                  <span class="white-text">78,000 ft.</span></p>
+            <div class="col-12 col-md-6 mt-5 mt-md-0 d-flex justify-content-center">
+              <div>
+                <img src="img\mars.png">
+                <div class="pointing"></div>
+                  <img src="img\17766460_fad7afd7dbbfe972851e14fa2b9396dc_t1.jpg" class="mt-olympus d-block">
+                  <div class="text-uppercase olympus-text">
+                    <p><span class="brown-text">mt. olympus</span><br>
+                    <span class="white-text">78,000 ft.</span></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="testimonials d-flex justify-content-center mt-70">
-          <div class="container m-5 p-0">
+        <section class="testimonials d-flex justify-content-center mt-5">
+          <div class="container m-0 m-lg-5 p-0">
             <div class="row d-flex align-items-end m-0 p-0">
               <div class="col-3 m-0 p-0"><img src="img\17766460_fad7afd7dbbfe972851e14fa2b9396dc_t2.jpg"></div>
               <div class="col-3 m-0 p-0"><img src="img\mars1-1200x630.jpg"></div>
-              <div class="col-6 m-0 p-5">
+              <div class="col-6 m-0 p-lg-5">
                 <div class="container m-0 p-0">
                   <div class="row m-0 p-0">
                     <div class="col-9 m-0 p-0 d-flex align-items-end">
@@ -258,13 +299,13 @@
                       </div>
                     </div>
                     <div class="col-3 m-0 d-flex align-items-end">
-                      <table><tr><td class="text-center align-center"><i class="bi bi-chevron-left"></i></td><td class="text-center align-center"><i class="bi bi-chevron-right"></i></td></tr></table>
+                      <table><tr><td class="text-center align-center left"><i class="bi bi-chevron-left"></i></td><td class="text-center align-center right"><i class="bi bi-chevron-right"></i></td></tr></table>
                     </div>
                   </div>
                   <div class="row mt-4 mb-4"><div class="col"><div class="line"></div></div></div>
                   <div class="row mt-4 mb-4">
                     <div class="col">
-                      <q class="white-text">I had the adventure of a life time on this planet. Some alien dude in a stomach told me to activate a reactor to melt the core and it turned the sky blue. Much fun. Highly recommend.</q>
+                      <q class="white-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam tenetur maxime sapiente.</q>
                     </div>
                   </div>
                 </div>
@@ -277,54 +318,62 @@
           </div>
         </div>
       </section>
-      <div class="title">
+      <div class="title mt-5">
         <p class="text-uppercase text-center">getting started</p>
         <h2 class="text-uppercase text-center">plan your trip</h2>
       </div>
-      <section class="plan-your-trip mt-70">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
+      <section class="plan-your-trip mt-5">
+        <div class="container m-auto">
+          <div class="row d-flex flex-wrap justify-content-center">
+            <div class="col-md-3 col-6 mb-3 mb-md-0 text-center">
               <img src="img\cosmonaut (3).png" class="m-3">
               <h5 class="text-uppercase">first time?</h5>
-              <p>Put your mind on ease. We'll take care of everything on this checklist.</p>
+              <p class="m-auto">Put your mind on ease. We'll take care of everything on this checklist.</p>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3 col-6 mb-3 mb-md-0 text-center">
               <img src="img\rocket-ship.png" class="m-3">
               <h5 class="text-uppercase">book a trip</h5>
-              <p>Book a trip to mars or any one of our 5 celestial bodies in no time.</p>
+              <p class="m-auto">Book a trip to mars or any one of our 5 celestial bodies in no time.</p>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3 col-6 mb-3 mb-md-0 text-center">
               <img src="img\bed.png" class="m-3">
               <h5 class="text-uppercase">book a room</h5>
-              <p>the finest and most cutting edge accomodations this side of the galaxy.</p>
+              <p class="m-auto">the finest and most cutting edge accomodations this side of the galaxy.</p>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3 col-6 mb-3 mb-md-0 text-center">
               <img src="img\moon (1).png" class="m-3">
               <h5 class="text-uppercase">first time?</h5>
-              <p>From a round of golf on the moon to off-roading excursions on mars.</p>
+              <p class="m-auto">From a round of golf on the moon to off-roading excursions on mars.</p>
             </div>
           </div>
         </div>
       </section>
-      <footer class="text-center mt-70">
+      <footer class="text-center mt-5">
         <img src="img\1c1a6ec6711caffd78e429202ed8be76.jpg">
         <div class="container">
           <div class="row">
             <div class="col text-center m-5"><h3>space</h3></div>
           </div>
-          <div class="row text-uppercase">
-            <ul class="list-inline">
-              <li class="list-inline-item ms-4"><a href="#">destinations</a></li>
-              <li class="list-inline-item ms-4 me-4"><a href="#">bookings</a></li>
-              <li class="list-inline-item ms-4 me-4"><a href="#">technology</a></li>
-              <li class="list-inline-item ms-4 me-4"><a href="#">my trips</a></li>
-              <li class="list-inline-item ms-4 me-4"><a href="#">faq</a></li>
-              <li class="list-inline-item me-4"><a href="#">support</a></li>
-            </ul>
+          <div class="row text-uppercase d-flex flex-md-nowrap justify-content-center">
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">destinations</a></div>
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">bookings</a></div>
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">technology</a></div>
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">my trips</a></div>
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">faq</a></div>
+              <div class="col-md-2 col-sm-4 my-sm-2 col-3 my-2"><a href="#">support</a></div>
           </div>
         </div>
       </footer>
+    </div>
+    <div id="searching" class="justify-content-center align-items-center">
+      <div class="black w-100 h-100 d-flex justify-content-center align-items-center">
+        <div>
+          <form action="#" method="GET">
+            <input type="search" id="search" name="search" placeholder="search..">
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
