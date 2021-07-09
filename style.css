@@ -377,10 +377,12 @@ hr{
 /* plan your trip */
 
 /* footer */
-
+footer{
+    height: 200px;
+}
 footer .container{
     position: relative;
-    bottom: 270px;
+    bottom: 180px;
     margin: auto;
 }
 footer img{
@@ -565,6 +567,11 @@ input[type="search"]::-webkit-search-results-decoration {
         margin-top: 8px;
     }
     /* discover */
+    footer .container{
+        position: relative;
+        bottom: 300px;
+        margin: auto;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
