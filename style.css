@@ -113,7 +113,7 @@ select option:hover{
 select option:checked{
     background: rgb(125, 99, 77) !important;
 }
-input::placeholder{
+#overrides input::placeholder{
     color: white;
 }
 ::-webkit-calendar-picker-indicator {
